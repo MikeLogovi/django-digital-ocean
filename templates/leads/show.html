@@ -1,0 +1,8 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+    <a href="{% url 'leads:leads.index' %}">Back</a>
+    Welcome {{lead.first_name}}
+    <a class="bg-blue-400" href="{% url 'leads:leads.update' lead.id %}">Update {{ lead.first_name}}</a>
+
+    <a class="bg-red-400" href="{% url 'leads:leads.delete' lead.id %}">Delete {{ lead.first_name}}</a>
+{% endblock content %}
